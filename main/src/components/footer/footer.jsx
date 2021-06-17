@@ -1,11 +1,10 @@
 import React from 'react';
 
 const Footer = () => {
-    return (
-        <footer className="footer text-center">
-            All Rights Reserved by Material-Pro admin. Designed and Developed by{' '}
-            <a href="https://www.wrappixel.com">WrapPixel</a>.
-        </footer>
-    );
-}
+  return (
+    <footer className='footer text-center'>
+      {/* Made in India <a href='https://www.wrappixel.com'>WrapPixel</a>. */}
+    </footer>
+  );
+};
 export default Footer;

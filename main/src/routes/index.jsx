@@ -1,4 +1,4 @@
-import Fulllayout from '../layouts/fulllayout.jsx';
+import Fulllayout from '../layouts/Fulllayout';
 
 var indexRoutes = [{ path: '/', name: 'Starter', component: Fulllayout }];
 
