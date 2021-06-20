@@ -129,7 +129,7 @@ const Header = () => {
                 <DropdownItem className='border-bottom'>
                   <i className='ti-settings mr-1 ml-1' /> Account Settings
                 </DropdownItem> */}
-                  <DropdownItem href='#/'>
+                  <DropdownItem href='#/?logout'>
                     <i className='fa fa-power-off mr-1 ml-1' /> Logout
                   </DropdownItem>
                 </DropdownMenu>

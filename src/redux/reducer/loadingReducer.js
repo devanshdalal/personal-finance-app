@@ -33,7 +33,7 @@ const makeNamedState = (table) => {
 // };
 
 const loadingReducer = (state = initialState, action) => {
-  console.log('loadingReducer: ', action);
+  // console.log('loadingReducer: ', action);
   switch (action.type) {
     case GET_FUNDS_SUCCESS: {
       return { ...state, funds: makeNamedState(action.payload) };

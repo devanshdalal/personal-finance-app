@@ -9,12 +9,22 @@ import { putBasketAction } from '../../redux/actions';
 import { TOKEN_KEY, HOSTED_UI } from '../../util/constants';
 import lscache from 'lscache';
 
+const upsert = (array, item) => {
+  const i = array.findIndex((_item) => _item.name === item.name);
+  if (i > -1) {
+    const ret = array.slice();
+    ret[i] = { ...item, id: i };
+    return ret;
+  }
+  return [...array, { ...item, id: array.length + 1 }];
+};
+
 const FundsForm = (props) => {
   useEffect(() => {
-    console.log('props', props);
+    // console.log('props', props);
     const token = lscache.get(TOKEN_KEY);
     if (!token) {
-      console.log('HOSTED_UI:', HOSTED_UI);
+      // console.log('HOSTED_UI:', HOSTED_UI);
       window.location.href = HOSTED_UI;
     }
   }, []);
@@ -41,15 +51,7 @@ const FundsForm = (props) => {
     event.preventDefault();
     const { name, wt } = currentRow;
     if (name && wt) {
-      setPortfolio([
-        ...portfolio,
-        {
-          name,
-          wt,
-          id:
-            portfolio.length === 0 ? 0 : portfolio[portfolio.length - 1].id + 1,
-        },
-      ]);
+      setPortfolio(upsert(portfolio, { name, wt }));
       setCurrentRow({
         name: '',
         wt: null,
@@ -73,7 +75,7 @@ const FundsForm = (props) => {
       name,
       schemes: portfolio.map((key) => omit(key, 'id')),
     };
-    console.log('putBasket:', basket);
+    // console.log('putBasket:', basket);
     dispatch(putBasketAction(basket));
     // this.props.putBasket({ name, schemes: basket, permanent: false });
   };

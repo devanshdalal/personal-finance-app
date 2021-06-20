@@ -8119,23 +8119,23 @@ Preloader
       line-height: 40px; }
 
 .input-form {
-  padding: 20px;
+  padding: 5px;
   display: flex;
-  border: #008f68 solid 20px; }
+  border: #008f68 solid 5px; }
+
+.selector-geography {
+  flex: 1; }
 
 .selector-name {
-  border: 10px solid #999;
-  padding: 0.5rem;
   flex: 4; }
 
 .selector-weight {
-  border: 10px solid green;
-  padding: 0.5rem;
   flex: 1; }
 
 .add-button {
   border: 2px solid #999;
-  flex: 1; }
+  flex: 1;
+  background-color: green; }
 
 .no-suggestions {
   color: #999;
@@ -8181,8 +8181,18 @@ Preloader
   display: flex; }
 
 .save-form {
-  padding: 20px;
-  border: orange solid 20px; }
+  padding: 10px;
+  border: orange solid 1px; }
+
+.quote {
+  margin: 0;
+  background: #eee;
+  padding: 1em;
+  border-radius: 1em; }
+
+.quote figcaption,
+.quote blockquote {
+  margin: 1em; }
 
 #main-wrapper[data-layout='vertical'], #main-wrapper[data-layout='horizontal'] {
   /*This is for the logo bg*/

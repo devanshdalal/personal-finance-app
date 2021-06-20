@@ -3,7 +3,7 @@ import React from 'react';
 const Footer = () => {
   return (
     <footer className='footer text-center'>
-      {/* Made in India <a href='https://www.wrappixel.com'>WrapPixel</a>. */}
+      Made with ❤ by <a href='http://devanshdalal.github.io'>devanshdalal</a>.
     </footer>
   );
 };

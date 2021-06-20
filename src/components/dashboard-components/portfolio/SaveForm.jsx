@@ -20,7 +20,7 @@ const SaveForm = ({ saveHandler }) => {
 
   return (
     <Form>
-      <InputGroup className='save-form'>
+      <InputGroup className='save-form' size='lg'>
         <Input
           type='text'
           name='Name'

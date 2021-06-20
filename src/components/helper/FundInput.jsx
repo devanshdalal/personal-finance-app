@@ -1,5 +1,5 @@
 import Select from 'react-select';
-import { useSelector } from 'react-redux';
+import React, { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 
 const FundInput = ({ weightRef, nameRef, currentRow, onChange, onSubmit }) => {
@@ -14,6 +14,15 @@ const FundInput = ({ weightRef, nameRef, currentRow, onChange, onSubmit }) => {
   // console.log('fundNames', fundNamesSuggestions);
   return (
     <div className='input-form'>
+      <Select
+        className='selector-geography'
+        defaultValue={{ label: 'India', value: 'India' }}
+        // isClearable={true}
+        isSearchable={true}
+        name='geography'
+        // value={currentRow.name}
+        options={[{ label: 'India', value: 'India' }]}
+      />
       <Select
         className='selector-name'
         defaultValue={''}

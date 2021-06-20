@@ -89,7 +89,7 @@ const Fulllayout = (props) => {
     });
     return r;
   }, [baskets]);
-  console.log('ThemeRoutes: ', ThemeRoutes);
+  // console.log('ThemeRoutes: ', ThemeRoutes);
 
   /*--------------------------------------------------------------------------------*/
   /* Theme Setting && Layout Options wiil be Change From Here                       */
@@ -138,7 +138,7 @@ const Fulllayout = (props) => {
             }
           </Switch>
         </div>
-        {/* <Footer /> */}
+        <Footer />
       </div>
     </div>
   );

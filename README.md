@@ -1,5 +1,8 @@
 <!-- # materialpro-react-lite -->
 <!-- Heading of Template -->
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/7b811bb8-6e8b-4368-9814-aba52a520151/deploy-status)](https://app.netlify.com/sites/mfmirror/deploys)
+
 <h1>
   <a href="https://www.wrappixel.com/templates/materialpro-react-admin-lite/">Material Pro React Admin Lite</a>
 </h1>
@@ -11,7 +14,6 @@
 
 <!-- <h4><a href="https://wrappixel.com/demos/free-admin-templates/material-pro-lite/html/index.html">Free Version Demo Link</a></h4> -->
 
-
 <!-- Description of Template -->
 <p>
   For all those who are not able to find the best<a href="https://www.wrappixel.com/templates/category/react-templates/"> free react template admin</a>, MaterialPro React Admin Lite can be on top of your list even when you are low on your budget. This template is based on React Redux framework, SaSSBase CSS, modular as well as the modern design approach that provides customization options and fully responsiveness.
@@ -19,7 +21,6 @@
 <p>
   The carefully crafted template is complete in itself relating to features, components, elements, widgets, and other essential tools. With this react redux UI dashboard you get lots of handy features for your personal as well as commercial projects. Possibly, you may require a comprehensive bundle of features for your commercial projects that you might not get in its free version, WrapPixel has carefully design pro version of this template with all of the features.
 </p>
-
 
 <!-- Versions of Template -->
 <h2><a id="user-content-versions" class="anchor" aria-hidden="true" href="#versions"></a>Versions</h2>
@@ -84,7 +85,6 @@
   </li>
 </ul>
 
-
 <!-- Upgrade to Premium version of Template -->
 <h2>Upgrade to Premium version</h2>
 <a target="_blank" href="https://www.wrappixel.com/templates/materialpro-react-redux-admin/">
@@ -117,4 +117,3 @@
 <!-- <a href="https://www.wrappixel.com/templates/materialpro/"><img src="https://www.wrappixel.com/wp-content/uploads/2019/01/materialpro-bootstrap-nw-1.jpg"/></a><br/> -->
 
 <!-- <h4><a href="https://www.wrappixel.com/demos/admin-templates/material-pro/material/index.html">Demo</a></h4> -->
-

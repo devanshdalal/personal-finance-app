@@ -21,7 +21,7 @@ const PortfolioOverview = ({ portfolio }) => {
     }
   }, [funds, portfolio]);
 
-  console.log('portfolio', portfolio);
+  // console.log('portfolio', portfolio);
 
   const [flabels, fweights] = useMemo(() => {
     if (portfolio) {
