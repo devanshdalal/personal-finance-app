@@ -32,7 +32,9 @@ const getTokenOpts = () => {
 
 const deleteLocalToken = (err) => {
   console.log('err', err)
-  lscache.remove(TOKEN_KEY)
+  if (lscache.get(TOKEN_KEY)) {
+    lscache.remove(TOKEN_KEY)
+  }
 }
 
 export const getBaskets = (state) => state.baskets;
@@ -60,7 +62,8 @@ export function* GetBasketsOp() {
     method: 'get',
     path : tokenOpts.path,
     queryParams: {table: "baskets"},
-    headers: tokenOpts.headers
+    headers: tokenOpts.headers,
+    handler: deleteLocalToken
   };
   const res = yield call(dbClient, options);
   yield put({

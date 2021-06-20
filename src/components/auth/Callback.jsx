@@ -8,7 +8,10 @@ const TOKEN_EXPIRY = 'expires_in';
 
 // parseInt(queryParams[TOKEN_EXPIRY] * 1000
 const Callback = (props) => {
-  // console.log('window', window.reload);
+  console.log(
+    'REACT_APP_AUTH_CALLBACK_URL',
+    process.env.REACT_APP_AUTH_CALLBACK_URL
+  );
   // If a Cognito auth code is in the URL (could be a hash or query component), init the new session
 
   // console.log('propsxxxxxx', props);
