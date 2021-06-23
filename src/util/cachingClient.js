@@ -23,26 +23,6 @@ const dbClient = (options) => {
     handler(err)
   })
   return p
-
-  // try {
-  //   const p = axios({
-  //     method: method,
-  //     baseURL: APP_HOST,
-  //     url: path,
-  //     params: queryParams,
-  //     data: data,
-  //     headers
-  //   })
-  //   p.catach(err => )
-  //   return p
-    
-  //   // lscache.set(table, response, LSCACHE_TIMEOUT);
-  // } catch (err) {
-  //   if(handler) {
-  //     console.log('err', err)
-  //     handler(err)
-  //   }
-  // }
 };
 
 export default dbClient;

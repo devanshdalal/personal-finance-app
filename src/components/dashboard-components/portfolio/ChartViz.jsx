@@ -64,7 +64,7 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                 fontSize: 20,
               },
               legend: {
-                display: true,
+                display: false,
                 position: 'bottom',
                 maxWidth: 100,
               },
