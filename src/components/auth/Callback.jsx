@@ -59,8 +59,8 @@ const Callback = (props) => {
         fee light and risk-averse investing instruments. For e.g., there is no
         real small cap index to follow, so one is left with only market indices
         for investing. But, here you can create weighted baskets of managed
-        mutual funds to track their portfolio and possibly mirror them yourself,
-        just create an account to make and track your own basket. Some of them
+        mutual funds to track their portfolio and possibly mirror them yourself
+        , just create an account to make and track your own basket. Some of them
         are already created to begin with.
       </p>
     </div>
