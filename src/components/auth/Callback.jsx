@@ -35,12 +35,12 @@ const Callback = (props) => {
     <div>
       <p>
         The trend of investing in mutual funds in developing economies has been
-        observed to shift towards less and less avtively managed instruments,
-        i.e. index ETF, stocks, index investing. &nbsp;
+        observed to shift towards lesser and lesser actively managed
+        instruments, i.e. index ETF, stocks, index investing. &nbsp;
         <a href='https://www.investopedia.com/articles/investing/030916/buffetts-bet-hedge-funds-year-eight-brka-brkb.asp'>
           Buffett&rsquo;s Bet Win
         </a>
-        &nbsp; provides some postivive validations for this.
+        &nbsp; provides some postivive validations towards this.
       </p>
       <figure className='quote'>
         <blockquote>
@@ -54,13 +54,14 @@ const Callback = (props) => {
         </figcaption>
       </figure>
       <p>
-        In developing economies like India, with average 1% asset management fee
-        for direct funds, there is a strong need of asset fee light and
-        risk-averse investing instruments. For e.g., there is no real small cap
-        index to follow, so one is left with only market indices for investing.
-        But, here you can create weighted baskets of managed mutual funds to
-        track their portfolio and possibly mirror them yourself. Some of them
-        are already created for instance.
+        In developing economies like India, with average 1-2% asset management
+        fee for direct mutual funds, there is a strong need of asset management
+        fee light and risk-averse investing instruments. For e.g., there is no
+        real small cap index to follow, so one is left with only market indices
+        for investing. But, here you can create weighted baskets of managed
+        mutual funds to track their portfolio and possibly mirror them yourself,
+        just create an account to make and track your own basket. Some of them
+        are already created to begin with.
       </p>
     </div>
   );
