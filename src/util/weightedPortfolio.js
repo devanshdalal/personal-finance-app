@@ -42,7 +42,7 @@ export const getBasketPortfolio = (schemes = [], funds) => {
     }
   ).sort((a, b) => b.wt - a.wt).slice(0,5);
   return {
-    overview: portfolio.sort((a, b) => b.wt - a.wt).slice(0,15),
+    overview: portfolio.sort((a, b) => b.wt - a.wt).slice(0,10),
     sectorDist
   };
 };
