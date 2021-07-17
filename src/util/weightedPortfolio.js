@@ -20,7 +20,8 @@ export const getBasketPortfolio = (schemes = [], funds) => {
   });
   let portfolio = [];
   Object.keys(portfolioMap).forEach(key => {
-    portfolio.push({ stock: key, wt: portfolioMap[key] / totalWt, sector: portfolioSectorMap[key]});
+    const wt = portfolioMap[key] / totalWt;
+    portfolio.push({ stock: key, wt: wt.toFixed(3), sector: portfolioSectorMap[key]});
   });
   let sectorWeight = {}
   portfolio.forEach(

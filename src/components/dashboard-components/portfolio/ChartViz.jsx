@@ -11,6 +11,8 @@ const hoverBackgroundColor = [
   '#35014F',
 ];
 
+const X_LABEL_SIZE = 6;
+
 const ChartViz = ({ labels, weights, chart, description }) => {
   // console.log('labels', labels, 'weights', weights);
   const chartData = useMemo(() => {
@@ -48,6 +50,40 @@ const ChartViz = ({ labels, weights, chart, description }) => {
               legend: {
                 display: false,
                 position: 'right',
+              },
+              scales: {
+                xAxes: [
+                  {
+                    ticks: {
+                      autoSkip: true,
+                      display: function (context, opts) {
+                        console.log('display', context, opts);
+                        return true;
+                      },
+                    },
+                  },
+                ],
+                yAxes: [
+                  {
+                    ticks: {
+                      autoSkip: true,
+                    },
+                  },
+                ],
+              },
+              responsive: true,
+              // maintainAspectRatio: false,
+              onResize: function (newChart, newSize) {
+                // console.log('newChart:', newChart);
+                // console.log('newSize:', newSize);
+
+                if (newSize.width < 500) {
+                  newChart.options.scales.xAxes[0].display = false;
+                  newChart.options.scales.yAxes[0].display = false;
+                } else {
+                  newChart.options.scales.xAxes[0].display = true;
+                  newChart.options.scales.yAxes[0].display = true;
+                }
               },
             }}
           />
