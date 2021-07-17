@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMemo } from 'react';
-import { Pie, Bar, Radar, Doughnut } from 'react-chartjs-2';
+import { Pie, Bar, Doughnut } from 'react-chartjs-2';
 
 const backgroundColor = ['#B21F00', '#C9DE00', '#2FDE00', '#00A6B4', '#6800B4'];
 const hoverBackgroundColor = [
@@ -11,10 +11,9 @@ const hoverBackgroundColor = [
   '#35014F',
 ];
 
-const X_LABEL_SIZE = 6;
-
 const ChartViz = ({ labels, weights, chart, description }) => {
   // console.log('labels', labels, 'weights', weights);
+  const IS_LARGE_SCREEN = window.innerWidth > 500;
   const chartData = useMemo(() => {
     return {
       labels,
@@ -56,10 +55,8 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                   {
                     ticks: {
                       autoSkip: true,
-                      display: function (context, opts) {
-                        console.log('display', context, opts);
-                        return true;
-                      },
+                      display: IS_LARGE_SCREEN,
+                      minRotation: 30,
                     },
                   },
                 ],
@@ -67,24 +64,25 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                   {
                     ticks: {
                       autoSkip: true,
+                      display: IS_LARGE_SCREEN,
                     },
                   },
                 ],
               },
               responsive: true,
               // maintainAspectRatio: false,
-              onResize: function (newChart, newSize) {
-                // console.log('newChart:', newChart);
-                // console.log('newSize:', newSize);
+              // onResize: function (newChart, newSize) {
+              //   // console.log('newChart:', newChart);
+              //   // console.log('newSize:', newSize);
 
-                if (newSize.width < 500) {
-                  newChart.options.scales.xAxes[0].display = false;
-                  newChart.options.scales.yAxes[0].display = false;
-                } else {
-                  newChart.options.scales.xAxes[0].display = true;
-                  newChart.options.scales.yAxes[0].display = true;
-                }
-              },
+              //   if (newSize.width < 500) {
+              //     newChart.options.scales.xAxes[0].display = false;
+              //     newChart.options.scales.yAxes[0].display = false;
+              //   } else {
+              //     newChart.options.scales.xAxes[0].display = true;
+              //     newChart.options.scales.yAxes[0].display = true;
+              //   }
+              // },
             }}
           />
         </div>
@@ -119,8 +117,8 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                 fontSize: 20,
               },
               legend: {
-                display: false,
-                // position: 'right',
+                display: IS_LARGE_SCREEN,
+                position: 'right',
               },
             }}
           />
