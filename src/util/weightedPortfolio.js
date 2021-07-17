@@ -21,15 +21,15 @@ export const getBasketPortfolio = (schemes = [], funds) => {
   let portfolio = [];
   Object.keys(portfolioMap).forEach(key => {
     const wt = portfolioMap[key] / totalWt;
-    portfolio.push({ stock: key, wt: wt.toFixed(3), sector: portfolioSectorMap[key]});
+    portfolio.push({ stock: key, wt: wt.toFixed(3), raw_wt: wt, sector: portfolioSectorMap[key]});
   });
   let sectorWeight = {}
   portfolio.forEach(
     p => {
       if (p.sector in sectorWeight) {
-        sectorWeight[p.sector] += p.wt
+        sectorWeight[p.sector] += p.raw_wt
       } else {
-        sectorWeight[p.sector] = p.wt
+        sectorWeight[p.sector] = p.raw_wt
       }
     }
   )
