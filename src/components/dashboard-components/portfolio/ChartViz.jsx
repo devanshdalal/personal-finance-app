@@ -33,6 +33,11 @@ const ChartViz = ({ labels, weights, chart, description }) => {
   }, [labels, weights, description]);
 
   // console.log('chartData', chart);
+  const widthOverride = !IS_LARGE_SCREEN
+    ? {
+        maxWidth: 10,
+      }
+    : {};
 
   return (
     <div>
@@ -56,7 +61,12 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                     ticks: {
                       autoSkip: true,
                       display: IS_LARGE_SCREEN,
-                      minRotation: 30,
+                      callback: function (value, index, values) {
+                        return value.length < 12
+                          ? value
+                          : `${value.slice(0, 12)}...`;
+                      },
+                      minRotation: IS_LARGE_SCREEN ? 0 : 30,
                     },
                   },
                 ],
@@ -64,7 +74,8 @@ const ChartViz = ({ labels, weights, chart, description }) => {
                   {
                     ticks: {
                       autoSkip: true,
-                      display: IS_LARGE_SCREEN,
+                      maxTicksLimit: 4,
+                      // display: IS_LARGE_SCREEN,
                     },
                   },
                 ],
@@ -119,7 +130,18 @@ const ChartViz = ({ labels, weights, chart, description }) => {
               legend: {
                 display: IS_LARGE_SCREEN,
                 position: 'right',
+                ...widthOverride,
+                labels: {
+                  // fontSize: 10,
+                  boxWidth: 20,
+                },
               },
+              // scales: {
+              //   scaleLabel: {
+              //     display: true,
+              //     labelString: 'No. of tasks',
+              //   },
+              // },
             }}
           />
         </div>

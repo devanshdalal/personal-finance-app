@@ -32,7 +32,7 @@ const PortfolioOverview = ({ portfolio }) => {
   return (
     <div>
       <Row>
-        <Col sm={6} lg={6}>
+        <Col sm={6} lg={6} className='chart-col-left'>
           <ChartViz
             labels={flabels}
             weights={fweights}
@@ -40,7 +40,7 @@ const PortfolioOverview = ({ portfolio }) => {
             description={'Basket Portfolio'}
           />
         </Col>
-        <Col sm={6} lg={6}>
+        <Col sm={6} lg={6} className='chart-col-right'>
           <ChartViz
             labels={sectorLabels}
             weights={sectorWt}

@@ -17,3 +17,13 @@
   margin: #dc101a solid 5px;
   display: flex;
 }
+
+@media (min-width: 576px) {
+  .chart-col-left {
+    padding-right: 0 !important;
+  }
+
+  .chart-col-right {
+    padding-left: 0 !important;
+  }
+}
